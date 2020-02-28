@@ -1,0 +1,11 @@
+{% extends "blog/index.html" %}
+{% block content %}
+    <h1>{{name}}</h1>
+    <h2>Welcome to About</h2>
+    {% for post in posts %}
+            <h2>{{ post.author }}</h2>
+            <p>{{ post.age }}</p>
+            <p>{{ post.country }}</p>
+            <p>{{ post.fav_film }}<p>
+    {% endfor %}
+{% endblock content %}
