@@ -1,6 +1,15 @@
 {% extends "blog/index.html" %}
 {% block content%}
-    <h1>Some brand new users</h1>
+    <h1>Some brand new users</h1>   
+    {% if messages %}
+              {% for message in messages %}
+                <!-- <div class="alert alert-{{  message.tags  }}"> -->
+                  <div class='alert alert-{{ message.tags }}'>
+                    {{ message }}
+                  </div>
+                <!-- </div> -->
+              {% endfor %}
+            {% endif %}
         {% for post in posts %}
             <article class="media content-section">
                 <div class="media-body">
